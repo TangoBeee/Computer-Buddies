@@ -92,6 +92,21 @@
     
       
       <input name="animation" type="hidden"> 
-  
+       
+      <input name="animation" type="hidden"> 
+      <audio controls hidden id="song" >
+        <source src="assets/bg.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+
+      <script>
+        document.addEventListener('click', musicPlay);
+    function musicPlay() {
+        document.getElementById('song').play().loop();
+        document.removeEventListener('click', musicPlay);
+    }
+    </script>
+ 
+ 
   </body>
 </html>
